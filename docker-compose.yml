@@ -1,0 +1,95 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: aya-postgres
+    environment:
+      POSTGRES_DB: aya_defi_navigator
+      POSTGRES_USER: aya_user
+      POSTGRES_PASSWORD: aya_password
+    ports:
+      - "5432:5432"
+    volumes:              
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - aya-network
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: aya-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - aya-network
+
+  # Backend API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: aya-backend
+    environment:
+      - DATABASE_URL=postgresql://aya_user:aya_password@postgres:5432/aya_defi_navigator
+      - REDIS_URL=redis://redis:6379
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - ENVIRONMENT=development
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - ./backend:/app
+    networks:
+      - aya-network
+
+  # MCP Server
+  mcp-server:
+    build:
+      context: ./mcp-server
+      dockerfile: Dockerfile
+    container_name: aya-mcp-server
+    environment:
+      - NODE_ENV=development
+      - BACKEND_URL=http://backend:8000
+    ports:
+      - "3001:3001"
+    depends_on:
+      - backend
+    volumes:
+      - ./mcp-server:/app
+    networks:
+      - aya-network
+
+  # Frontend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: aya-frontend
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+      - NEXT_PUBLIC_MCP_URL=http://localhost:3001
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+      - mcp-server
+    volumes:
+      - ./frontend:/app
+    networks:
+      - aya-network
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  aya-network:
+    driver: bridge

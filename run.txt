@@ -1,0 +1,8 @@
+cd backend
+uvicorn main:app --reload
+
+cd mcp-server
+npm run dev
+
+cd frontend
+npm run dev

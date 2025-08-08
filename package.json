@@ -1,0 +1,62 @@
+{
+  "name": "aya-defi-navigator",
+  "version": "1.0.0",
+  "description": "AI-Powered DeFi Onboarding & Risk Management Platform",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && npm run install:frontend && npm run install:mcp && npm run install:backend",
+    "install:frontend": "cd frontend && npm install",
+    "install:mcp": "cd mcp-server && npm install",
+    "install:backend": "cd backend && pip install -r requirements.txt",
+
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:mcp\" \"npm run dev:frontend\"",
+    "dev:manual": "echo 'Run these in 3 separate terminals:' && echo '1. cd backend && uvicorn main:app --reload --port 8000' && echo '2. cd mcp-server && npm run dev' && echo '3. cd frontend && npm run dev'",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:mcp": "cd mcp-server && npm run dev",
+    "dev:backend": "cd backend && uvicorn main:app --reload --port 8000",
+
+    "build": "npm run build:frontend && npm run build:mcp",
+    "build:frontend": "cd frontend && npm run build",
+    "build:mcp": "cd mcp-server && npm run build",
+
+    "test": "npm run test:frontend && npm run test:mcp && npm run test:backend",
+    "test:frontend": "cd frontend && npm test -- --watchAll=false",
+    "test:mcp": "cd mcp-server && npm test",
+    "test:backend": "cd backend && pytest tests/ -v",
+
+    "lint": "npm run lint:frontend && npm run lint:mcp && npm run lint:backend",
+    "lint:frontend": "cd frontend && npm run lint",
+    "lint:mcp": "cd mcp-server && npm run lint",
+    "lint:backend": "cd backend && flake8 app/ && black --check app/",
+
+    "docker:up": "podman-compose up -d || docker-compose up -d",
+    "docker:down": "podman-compose down || docker-compose down",
+    "docker:logs": "podman-compose logs -f || docker-compose logs -f",
+    "podman:up": "podman-compose up -d",
+    "podman:down": "podman-compose down",
+
+    "setup": "./scripts/setup.sh",
+    "start": "npm run docker:up",
+    "stop": "npm run docker:down",
+    "health": "curl -f http://localhost:3000 && curl -f http://localhost:8000/health && curl -f http://localhost:3001"
+  },
+  "keywords": [
+    "defi",
+    "ai",
+    "blockchain",
+    "risk-management",
+    "onboarding",
+    "web3",
+    "ethereum",
+    "mcp"
+  ],
+  "author": "Aya Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "workspaces": [
+    "frontend",
+    "mcp-server"
+  ]
+}
