@@ -11,9 +11,13 @@
 ## Project Information
 
 **Primary Contact**: Mohammed Faisar A
+
 **Telegram Handle**: @faisar05
+
 **Team**: Matrix
+
 **Project Title**: Aya DeFi Navigator
+
 **Elevator Pitch**: AI-powered DeFi coach that explains complex concepts simply, assesses your risk, and lets you practice safely before real trades.
 
 ## Detailed Project Description
