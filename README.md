@@ -8,7 +8,7 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?logo=fastapi)](https://fastapi.tiangolo.com/)
 [![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
 
-## 📋 Project Information
+## Project Information
 
 **Primary Contact**: Mohammed Faisar A
 **Telegram Handle**: @faisar05
@@ -16,7 +16,7 @@
 **Project Title**: Aya DeFi Navigator
 **Elevator Pitch**: AI-powered DeFi coach that explains complex concepts simply, assesses your risk, and lets you practice safely before real trades.
 
-## 📖 Detailed Project Description
+## Detailed Project Description
 
 Aya DeFi Navigator is a comprehensive AI-powered platform designed to solve the critical problem of DeFi complexity that causes 95% of newcomers to abandon the ecosystem within their first week.
 
@@ -26,13 +26,13 @@ DeFi has a massive accessibility crisis - 95% of newcomers abandon the ecosystem
 ### Our Solution
 Aya DeFi Navigator transforms complex blockchain finance into personalized, safe, and educational experiences. We act as your intelligent DeFi mentor, guiding users from complete beginner to confident participant through:
 
-- **🤖 AI-Powered Learning**: Personalized tutorials with Llama (Groq) integration
-- **🛡️ Real-Time Risk Assessment**: Continuous portfolio and protocol monitoring
-- **🧪 Safe Practice Environment**: Testnet simulations before real transactions
-- **📊 Progress Tracking**: Gamified learning with achievements and analytics
-- **🔗 Multi-Protocol Support**: Integration with Uniswap, Aave, Compound, and more
+- **AI-Powered Learning**: Personalized tutorials with Llama (Groq) integration
+- **Real-Time Risk Assessment**: Continuous portfolio and protocol monitoring
+- **Safe Practice Environment**: Testnet simulations before real transactions
+- **Progress Tracking**: Gamified learning with achievements and analytics
+- **Multi-Protocol Support**: Integration with Uniswap, Aave, Compound, and more
 
-## 🎯 Key Features
+## Key Features
 
 ### Natural Language Onboarding
 - **`explain_concept_simply(query)`** - AI explains complex DeFi concepts in simple terms
@@ -58,7 +58,7 @@ Aya DeFi Navigator transforms complex blockchain finance into personalized, safe
 - User feedback loop for continuous improvement
 - Performance benchmarking against peers
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
@@ -82,7 +82,7 @@ Aya DeFi Navigator transforms complex blockchain finance into personalized, safe
                     └─────────────────┘
 ```
 
-## �️ Installation Steps
+## Installation Steps
 
 ### Prerequisites
 
@@ -181,7 +181,7 @@ npm run dev
 - **API Documentation**: http://localhost:8000/docs
 - **MCP Server**: http://localhost:3001
 
-## 📚 Implementation Guide
+## Implementation Guide
 
 ### Core Components
 
@@ -327,7 +327,7 @@ npm run test:integration
 - **MCP Server**: Tool functionality and error handling
 - **E2E**: Critical user flows with Playwright
 
-## 🚀 Deployment
+## Deployment
 
 ### Production Environment
 
@@ -364,7 +364,7 @@ alembic upgrade head
 - **Logging**: Structured JSON logging with correlation IDs
 - **Error Tracking**: Integration-ready for Sentry/DataDog
 
-## 🎨 Design System
+## Design System
 
 ### Color Palette
 - **Primary Orange**: `#f97316` - Main brand color
@@ -384,7 +384,7 @@ alembic upgrade head
 - Subtle shadows and hover states
 - Mobile-first responsive design
 
-## 📊 Success Metrics
+## Success Metrics
 
 ### Target KPIs
 - **Onboarding Completion Rate**: ≥ 80%
@@ -398,7 +398,7 @@ alembic upgrade head
 - Risk assessment effectiveness metrics
 - A/B testing framework for feature optimization
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
@@ -415,18 +415,18 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 - Conventional commits for clear history
 - 80%+ test coverage for new features
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Groq** for AI/LLM capabilities
 - **DeFi Llama** for protocol data
 - **Uniswap & Aave** for protocol integrations
 - **The DeFi Community** for inspiration and feedback
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -481,7 +481,7 @@ npm install
 - Use async/await for I/O operations
 - Implement request rate limiting
 
-## 🔐 Security Considerations
+## Security Considerations
 
 ### Wallet Security
 - Never store private keys on the server
@@ -498,7 +498,7 @@ npm install
 - Implement proper access controls
 - Regular security audits and updates
 
-## 🌍 Internationalization
+## Internationalization
 
 The platform supports multiple languages:
 
@@ -514,30 +514,30 @@ await explainConcept({
 })
 ```
 
-## 📈 Roadmap
+## Roadmap
 
-### Phase 1 (Current) - Core Platform ✅
+### Phase 1 (Current) - Core Platform 
 - [x] AI-powered explanations
 - [x] Risk assessment engine
 - [x] Transaction simulation
 - [x] Progress tracking
 - [x] Multi-protocol support
 
-### Phase 2 - Advanced Features 🚧
+### Phase 2 - Advanced Features 
 - [ ] Automated portfolio rebalancing
 - [ ] Advanced risk analytics
 - [ ] Social learning features
 - [ ] Mobile app development
 - [ ] Cross-chain support
 
-### Phase 3 - Ecosystem Expansion 📋
+### Phase 3 - Ecosystem Expansion 
 - [ ] Premium subscription tiers
 - [ ] API marketplace for developers
 - [ ] Integration with 50+ protocols
 - [ ] Institutional features
 - [ ] Global expansion
 
-## 📞 Support
+## Support
 
 - **Documentation**: [docs.ayadefi.com](https://docs.ayadefi.com)
 - **Discord**: [Join our community](https://discord.gg/ayadefi)
