@@ -1,4 +1,4 @@
-# Aya DeFi Navigator 🚀
+# Aya DeFi Navigator 
 
 **AI-Powered DeFi Onboarding & Risk Management Platform**
 
