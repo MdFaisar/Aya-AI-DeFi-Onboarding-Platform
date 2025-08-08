@@ -1,4 +1,4 @@
-# Aya DeFi Navigator 
+# Aya-AI-Defi-Onboarding-Platform
 
 **AI-Powered DeFi Onboarding & Risk Management Platform**
 
@@ -16,7 +16,7 @@
 
 **Team**: Matrix
 
-**Project Title**: Aya DeFi Navigator
+**Project Title**: Aya-AI-Defi-Onboarding-Platform
 
 **Elevator Pitch**: AI-powered DeFi coach that explains complex concepts simply, assesses your risk, and lets you practice safely before real trades.
 
